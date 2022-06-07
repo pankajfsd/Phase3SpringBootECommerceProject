@@ -1,0 +1,18 @@
+
+-- Inserting the role
+
+INSERT INTO ROLE(ID, NAME)
+VALUES(1, 'ROLE_ADMIN'),
+(2,'ROLE_USER');
+
+-- Go to https://bcrypt-generator.com/   to generate the Bcrypt Password for ‘admin’
+
+-- Inserting User
+
+INSERT INTO USER(ID, EMAIL, PASSWORD,FIRST_NAME, LAST_NAME)
+VALUES(1,'admin@gmail.com','$2a$12$zAI4A7MsnNgQGZ3fahU6veOHkdd5dtgysFy8FEoyCBNDPfZDez53e','Pankaj','Prakash');
+
+
+INSERT INTO USER_ROLE(USER_ID, ROLE_ID)
+VALUES(1,1),
+(1,2);
